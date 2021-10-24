@@ -80,8 +80,8 @@ while True:
         time.sleep(2.5)
     except Exception as e:
         print(f"""
-\033[0;31m\033[1m\033[5mError
-\u001b[0;0m:\033[1m message: \033[0;31m\033[1m\033[5m{e}
+\033[0;31m\033[1m\033[5mError\u001b[0;0m:\033[1m 
+Message: \033[0;31m\033[1m\033[5m{e}
 \u001b[0;0m\033[1m Sequence: \033[0;31m\033[1m\033[5m{sequence}\u001b[0;0m
 """)
         pass
