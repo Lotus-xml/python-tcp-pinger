@@ -23,7 +23,7 @@ parser.add_argument("-t", "--timeout", default=5, type=int, help="TCP connection
 
 args = parser.parse_args()
 
-print("""\033[0;31m\033[1m\033[5m
+print("""\033[0;31m\033[1m\033[1m
  
  ▄▀▀▄ █  ▄▀▀█▄   ▄▀▀▄▀▀▀▄  ▄▀▀▄ ▄▀▄  ▄▀▀█▄  
 █  █ ▄▀ ▐ ▄▀ ▀▄ █   █   █ █  █ ▀  █ ▐ ▄▀ ▀▄ 
@@ -71,18 +71,18 @@ while True:
         time2 = time.time()
         ping = (time2 - time1) * 1000
         print(f"""
-\033[1mHost: \033[0;31m\033[1m\033[5m{ip}
-\u001b[0;0m\033[1mPort: \033[0;31m\033[1m\033[5m{port}
-\u001b[0;0m\033[1mTime: \033[0;31m\033[1m\033[5m{ping:.2f}ms
-\u001b[0;0m\033[1mSequence: \033[0;31m\033[1m\033[5m{sequence}\u001b[0;0m
+\033[1mHost: \033[0;31m\033[1m\033[1m{ip}
+\u001b[0;0m\033[1mPort: \033[0;31m\033[1m\033[1m{port}
+\u001b[0;0m\033[1mTime: \033[0;31m\033[1m\033[1m{ping:.2f}ms
+\u001b[0;0m\033[1mSequence: \033[0;31m\033[1m\033[1m{sequence}\u001b[0;0m
 """)
         sock.close()
         time.sleep(2.5)
     except Exception as e:
         print(f"""
 \033[0;31m\033[1m\033[5mError\u001b[0;0m:\033[1m 
-Message: \033[0;31m\033[1m\033[5m{e}
-\u001b[0;0m\033[1m Sequence: \033[0;31m\033[1m\033[5m{sequence}\u001b[0;0m
+Message: \033[0;31m\033[1m\033{e}
+\u001b[0;0m\033[1m Sequence: \033[0;31m\033[1m\033[1m{sequence}\u001b[0;0m
 """)
         pass
     except KeyboardInterrupt:
